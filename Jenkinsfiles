@@ -11,7 +11,7 @@ pipeline {
 
 	stage('Clean') {
             steps {
-                sh 'rm -r *:'
+                sh 'rm -r *'
             }
         }
         stage('git SCM clone') {
