@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Moved file') {
             steps {
-                sh pwd
+                sh 'pwd'
             }
         }
         
