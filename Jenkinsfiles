@@ -1,7 +1,19 @@
 pipeline {
     agent any
 
+
+
+
+
+
     stages {
+
+
+	stage('Clean') {
+            steps {
+                sh 'rm -r *:'
+            }
+        }
         stage('git SCM clone') {
             steps {
                 sh 'git clone https://gitlab.com/karthikkandiyoor29/wedding.git -b master' 
