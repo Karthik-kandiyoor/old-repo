@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git SCM clone') {
+            steps {
+                sh 'git clone https://gitlab.com/karthikkandiyoor29/wedding.git -b master' 
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'mv * /var/www/html'
+            }
+        }
+        stage('Moved file') {
+            steps {
+                sh pwd
+            }
+        }
+        
+        
+        
+        
+        
+    }
+}
