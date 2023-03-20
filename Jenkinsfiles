@@ -12,6 +12,7 @@ pipeline {
 	stage('Clean') {
             steps {
                 sh 'rm -r *'
+                sh 'rm -r ../../../../www/html/*
             }
         }
         stage('git SCM clone') {
@@ -22,7 +23,7 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                sh 'mv * wedding/* ../../../../var/www/html'
+                sh 'mv * wedding/* ../../../../www/html'
             }
         }
         stage('Moved file') {
