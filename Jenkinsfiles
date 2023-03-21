@@ -12,7 +12,7 @@ pipeline{
              
 	     steps{
                   
-		  sh ' https://gitlab.com/karthikkandiyoor29/wedding.git -b master '
+		  sh 'https://gitlab.com/karthikkandiyoor29/wedding.git -b master'
 
 	     }
  
