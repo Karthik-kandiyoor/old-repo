@@ -5,6 +5,7 @@ pipeline{
 	{
            steps{
               sh ' rm -r *'
+		sh 'rm -r ../../../../www/html/* '
 	   }
 	}
 
