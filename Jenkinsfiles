@@ -5,6 +5,7 @@ pipeline{
 	{
            steps{
               sh ' rm -r *'
+			  sh ' rm -r ../../../../www/html/*'
 	   }
 	}
 
@@ -12,14 +13,14 @@ pipeline{
              
 	     steps{
                   
-		  sh 'https://gitlab.com/karthikkandiyoor29/wedding.git -b master'
+		  sh ' https://gitlab.com/karthikkandiyoor29/wedding.git -b master '
 
 	     }
  
 	}
 	stage('deploy'){
               steps{
-                sh 'mv wedding/* ../../../../www/html'
+                sh ' mv wedding/* ../../../../www/html '
 	      }
 	}
      
