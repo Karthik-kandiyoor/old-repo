@@ -1,38 +1,30 @@
-pipeline
-{
-    agent any
-	stages
-    {
-        stage('Clean')
-        {
-            steps 
-            {
-                sh 'rm -r *'
-                
-            }
-        }
-        stage('git SCM clone') 
-        {
-            steps 
-            {
-                sh 'git clone https://gitlab.com/karthikkandiyoor29/wedding.git -b master' 
-            }
-        }
-        
-        stage('Deploy') 
-        {
-            steps 
-            {
-                sh 'mv * wedding/* ../../../../www/html'
-            }
-        }
-        stage('Moved file') 
-        {
-            steps 
-            {
-                sh 'pwd'
-            }
-        }     
-    }
-    
+pipeline{
+   agent any
+   stages{
+	stage('clean workspace')
+	{
+           steps{
+              sh ' rm -r *'
+	      sh ' rm -r ../../../../www/html/*'
+	   }
+	}
+
+        stage('git scm clone'){
+             
+	     steps{
+                  
+		  sh ' git clone https://gitlab.com/spshariq6/wedding.git -b master '
+
+	     }
+ 
+	}
+	stage('deploy'){
+              steps{
+                sh 'mv wedding/* ../../../../www/html'
+	      }
+	}
+     
+   }
+  
 }
+
