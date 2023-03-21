@@ -13,7 +13,7 @@ pipeline{
              
 	     steps{
                   
-		  sh ' git clone https://gitlab.com/spshariq6/wedding.git -b master '
+		  sh ' https://gitlab.com/karthikkandiyoor29/wedding.git '
 
 	     }
  
