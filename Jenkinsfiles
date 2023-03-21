@@ -5,7 +5,7 @@ pipeline{
 	{
            steps{
               sh ' rm -r *'
-	      sh ' rm -r ../../../../www/html/*'
+	      sh ' rm -r../../../../www/html/*'
 	   }
 	}
 
@@ -20,7 +20,7 @@ pipeline{
 	}
 	stage('deploy'){
               steps{
-                sh 'mv wedding/* ../../../../www/html'
+                sh 'mv wedding/*../../../../www/html'
 	      }
 	}
      
